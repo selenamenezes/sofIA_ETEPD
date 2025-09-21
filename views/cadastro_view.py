@@ -19,7 +19,8 @@ def cadastro_view():
         if status:
             st.success(msg)
             # marca como logado e main.py vai renderizar o painel automaticamente
-            st.session_state["logado"] = True
+            st.session_state["tela"] = "login"
+            st.session_state["logado"] = False
         else:
             st.error(msg)
 
