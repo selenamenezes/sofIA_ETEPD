@@ -2,7 +2,7 @@ import streamlit as st
 from controller.clientes_controller import login_cliente
 
 def login_view():
-    # Só mostra a view se st.session_state["tela"] for login
+    # so mostra a view se st.session_state["tela"] for login
     if st.session_state.get("tela") != "login":
         return
 
@@ -16,7 +16,7 @@ def login_view():
 
         if status:
             st.success(msg)
-            # → marca como logado; main.py vai renderizar o painel automaticamente
+            # marca como logado e main.py vai renderizar o painel automaticamente
             st.session_state["logado"] = True
         else:
             st.error(msg)

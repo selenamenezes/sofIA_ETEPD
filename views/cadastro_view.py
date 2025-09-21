@@ -2,7 +2,7 @@ import streamlit as st
 from controller.clientes_controller import cadastro_cliente
 
 def cadastro_view():
-    # Só renderiza se a tela ativa for cadastro
+    # so renderiza se a tela ativa for cadastro
     if st.session_state.get("tela") != "cadastro":
         return
 
@@ -18,7 +18,7 @@ def cadastro_view():
 
         if status:
             st.success(msg)
-            # → marca como logado; main.py vai renderizar o painel automaticamente
+            # marca como logado e main.py vai renderizar o painel automaticamente
             st.session_state["logado"] = True
         else:
             st.error(msg)
