@@ -19,5 +19,11 @@ def cadastro_view():
         status, msg = cadastro_cliente(nome, email, senha, confirm_senha)
         if status:
             st.success(msg)
+            # já muda pra tela de login depois de cadastrar
+            st.session_state["tela"] = "login"
         else:
             st.error(msg)
+
+    # 🔹 botão extra para trocar manualmente para a tela de login
+    if st.button("Já tenho cadastro"):
+        st.session_state["tela"] = "login"
