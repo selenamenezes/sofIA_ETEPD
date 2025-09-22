@@ -1,4 +1,5 @@
 import streamlit as st
+import time
 from controller.clientes_controller import cadastro_cliente
 
 def cadastro_view():
@@ -18,9 +19,11 @@ def cadastro_view():
 
         if status:
             st.success(msg)
-            # marca como logado e main.py vai renderizar o painel automaticamente
-            st.session_state["tela"] = "login"
             st.session_state["logado"] = False
+            # espera um pouco antes de trocar
+            time.sleep(1.5)
+            st.session_state["tela"] = "login"
+            st.rerun()
         else:
             st.error(msg)
 
