@@ -19,11 +19,6 @@ def cadastro_view():
 
         if status:
             st.success(msg)
-            st.session_state["logado"] = False
-            # espera um pouco antes de trocar
-            time.sleep(1.5)
-            st.session_state["tela"] = "login"
-            st.rerun()
         else:
             st.error(msg)
 
