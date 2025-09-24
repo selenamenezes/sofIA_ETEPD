@@ -24,6 +24,5 @@ def cadastro_view():
         else:
             st.error(msg)
 
-    # 🔹 botão extra para trocar manualmente para a tela de login
     if st.button("Já tenho cadastro"):
         st.session_state["tela"] = "login"
