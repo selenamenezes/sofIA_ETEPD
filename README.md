@@ -80,7 +80,7 @@ python main.py
 (Substitua main.py pelo nome correto do arquivo principal, caso seja diferente).
 ```
 
-#📁 Estrutura do Projeto (Exemplo)
+## 📁 Estrutura do Projeto (Exemplo)
 ```Bash
 Plaintext
 sofIA_ETEPD/
@@ -90,5 +90,5 @@ sofIA_ETEPD/
 ├── README.md           # Documentação do projeto
 └── main.py             # Arquivo para executar a IA
 ```
-#👩‍💻 Autores
+## 👩‍💻 Autores
 @selenamenezes
